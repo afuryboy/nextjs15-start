@@ -1,9 +1,9 @@
 import { Post, PostProps } from "@/components/post";
-type Props = {
-  feed: PostProps[];
-};
+// type Props = {
+//   feed: PostProps[];
+// };
 
-export default function Home(props: Props) {
+export default function Home() {
   const feed = [
     {
       id: "1",
