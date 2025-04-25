@@ -9,20 +9,8 @@ export default async function DetailPage({
 }: {
   params: Params;
 }) {
-  // const post = {
-  //   id: "1",
-  //   title: "Prisma is the perfect ORM for Next.js",
-  //   content:
-  //     "[Prisma](https://github.com/prisma/prisma) and Next.js go _great_ together!",
-  //   published: false,
-  //   author: {
-  //     name: "Nikolas Burk",
-  //     email: "burk@prisma.io",
-  //   },
-  // };
-  
   const {slug} = await params
-  const post:PostProps = await prisma.post.findUnique({
+  const post:any = await prisma.post.findUnique({
     where: {
       id: String(slug)
     },
