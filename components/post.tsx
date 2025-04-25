@@ -1,19 +1,7 @@
 
 "use client"
 import {useRouter} from "next/navigation";
-export type PostProps = {
-    id: string;
-    title: string;
-    author: {
-      name: string;
-      email: string;
-    } | null;
-    content: string;
-    published: boolean;
-  };
-
-
-export function Post({post}: {post:PostProps}) {
+export function Post({post}: {post:any}) {
     const router = useRouter();
     const authorName = post.author ? post.author.name : "Unknown author";
     return (

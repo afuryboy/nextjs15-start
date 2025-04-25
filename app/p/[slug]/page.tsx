@@ -1,4 +1,3 @@
-import { Post, PostProps } from "@/components/post";
 import Link from "next/link";
 import prisma from "@/lib/prisma";
 type Params = {
