@@ -6,7 +6,7 @@ type Params = {
 export default async function DetailPage({
   params,
 }: {
-  params: Params;
+  params: Promise<Params>;
 }) {
   const {slug} = await params
   const post:any = await prisma.post.findUnique({
