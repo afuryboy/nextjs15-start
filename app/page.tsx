@@ -3,7 +3,7 @@ import prisma from '@/lib/prisma'
 
 export default async function Home() {
   
-  const feed :any[]  = await prisma.post.findMany({
+  const feed  = await prisma.post.findMany({
     where: {published: true},
     include: {
       author: {
