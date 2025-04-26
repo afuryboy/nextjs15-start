@@ -11,11 +11,19 @@ export default async function Home() {
       },
     }
   })
+  const data = await fetch('http://localhost:3001/api/blog')
+    const list: any[] = await data.json()
   return (
     <div>
       <h1 className="p-8">首页</h1>
       <main className="px-8">
         {feed.map((post) => (
+          <div className="post" key={post.id}>
+            <Post post={post}></Post>
+          </div>
+        ))}
+        
+        {list.map((post) => (
           <div className="post" key={post.id}>
             <Post post={post}></Post>
           </div>
